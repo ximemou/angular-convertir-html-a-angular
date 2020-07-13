@@ -51,7 +51,7 @@ export class ProductsService {
     term = term.toLocaleLowerCase();
     this.products.forEach(product => {
       const lowerTitle = product.titulo.toLocaleLowerCase();
-      if (product.categoria.indexOf(term) >= 0 || lowerTitle.indexOf(term))  {
+      if (product.categoria.indexOf(term) >= 0 || lowerTitle.indexOf(term) >= 0)  {
         this.productsFiltered.push(product);
       }
     });
